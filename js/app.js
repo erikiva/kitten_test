@@ -1,15 +1,15 @@
 $( document ).ready(function() {
-    var clicks = 0;
-    displayClicks();
-    function displayClicks(){
-      $('#clicks').text(clicks);
+    $( ".kittens" ).delegate( ".kitten", "click", increaseClicks);
+
+
+    function displayClicks(num, element){
+      element.text(num);
     }
 
-    $('#kitten').on('click', increaseClicks);
-
     function increaseClicks(){
-      console.log('clicked');
-      clicks += 1;
-      displayClicks();
+      var clicksElement = $(this).siblings('.clicks');
+      var clicks = parseInt(clicksElement.text()) +1;
+      displayClicks(clicks, clicksElement);
+
     }
 });
