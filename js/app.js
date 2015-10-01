@@ -34,9 +34,7 @@ $( document ).ready(function() {
     $('#show-admin').on('click', loadAdmin);
 
     function loadAdmin(){
-
       $('#admin-area').load('admin.html', loadFormData);
-
     }
 
     function loadFormData(){
@@ -60,7 +58,9 @@ $( document ).ready(function() {
     }
 
     function hideAdmin(ev){
-       ev.preventDefault();
+      if (ev){
+        ev.preventDefault();
+      }
       $('#admin-area').text("");
     }
 
