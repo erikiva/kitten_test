@@ -1,5 +1,8 @@
 
-#cat-display{clear:both;}
-.kittens .clicks{
-  display:none;
+#cat-display{
+  clear:both;
+}
+.kittens {
+  width: 400px;
+  float:left;
 }
