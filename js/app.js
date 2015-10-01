@@ -8,7 +8,7 @@ $( document ).ready(function() {
       var display = $('.cat-display');
       var cat = '<h3>' + element.children('h3').text()+ '</h3>'+
           '<img src="img/'+ element.data('img') +'.jpg" alt="Cute kitten" class="kitten">'+
-          '<div class="clicks">'+ element.children('.clicks').text() + '</div>'
+          '<div class="clicks">'+ element.data('clicks') + '</div>'
       display.html(cat);
       display.attr('id', element.data('id')) ;
 
